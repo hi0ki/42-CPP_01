@@ -2,7 +2,7 @@ CPP = c++ -Wall -Wextra -Werror -std=c++98
 
 NAME = program
 
-SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+SRC = main.cpp Zombie.cpp zombieHorde.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
