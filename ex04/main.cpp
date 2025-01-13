@@ -4,6 +4,9 @@
 //std::ofstream to write to a file
 
 
+
+
+
 int main(int ac, char **av)
 {
 	if (ac < 4)
