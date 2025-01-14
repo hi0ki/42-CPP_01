@@ -4,9 +4,9 @@
 int main(int ac, char **av)
 {
 	if (ac < 4)
-		std::cerr << "parameters are missing" << std::endl;
+		std::cerr << "Error: Parameters are missing" << std::endl;
 	else if (ac > 4)
-		std::cerr << "too many parameters" << std::endl;
+		std::cerr << "Error: Too many parameters" << std::endl;
 	else 
 	{
 		std::string filename = av[1];
@@ -30,7 +30,7 @@ int main(int ac, char **av)
 		}
 		while (getline(ifile, line))
 		{
-			int i = 0;
+			i = 0;
 			while ((i = line.find(str1, i)) != -1)
 			{
 				line.erase(i, str1.length());
