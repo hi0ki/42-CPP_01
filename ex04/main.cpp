@@ -4,9 +4,9 @@
 int main(int ac, char **av)
 {
 	if (ac < 4)
-		std::cout << "parameters are missing" << std::endl;
+		std::cerr << "parameters are missing" << std::endl;
 	else if (ac > 4)
-		std::cout << "too many parameters" << std::endl;
+		std::cerr << "too many parameters" << std::endl;
 	else 
 	{
 		std::string filename = av[1];
@@ -16,11 +16,16 @@ int main(int ac, char **av)
 		std::string line;
 		int i = 0;
 
+		if (!str1.length())
+		{
+			std::cerr << "Error: The string to be replaced cannot be empty" << std::endl;
+			return (1);
+		}
 		std::ifstream ifile(filename);
 		std::ofstream ofile(file_replace);
 		if (!ifile.is_open() || !ofile.is_open())
 		{
-			std::cout << "Error: Cannot open file" << std::endl;
+			std::cerr << "Error: Cannot open file" << std::endl;
 			return (1);
 		}
 		while (getline(ifile, line))
