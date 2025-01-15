@@ -3,7 +3,7 @@ CPP = c++ -Wall -Wextra -Werror -std=c++98
 NAME = program
 
 SRC = main.cpp Harl.cpp
-HEADERS = p
+HEADERS = Harl.hpp
 
 OBJ = $(SRC:.cpp=.o)
 
